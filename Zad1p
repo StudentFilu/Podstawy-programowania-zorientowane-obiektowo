@@ -23,7 +23,6 @@ def srednia():
     print(f"Średnia: {srednia:.2f}")
     print("Uczeń zdał." if srednia >= 3.0 else "Uczeń nie zdał.")
 
-# Menu główne 
 while True:
     wybor = input("\n1. Kalkulator, 2. Konwerter, 3. Średnia, 4. Wyjście: ")
     if wybor == '1': kalkulator()
