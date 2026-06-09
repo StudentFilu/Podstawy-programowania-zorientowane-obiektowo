@@ -1,0 +1,31 @@
+def kalkulator():
+    a = float(input("Podaj pierwszą liczbę: "))
+    b = float(input("Podaj drugą liczbę: "))
+    op = input("Podaj operację (+, -, *, /): ")
+    if op == '+': print(f"Wynik: {a + b}")
+    elif op == '-': print(f"Wynik: {a - b}")
+    elif op == '*': print(f"Wynik: {a * b}")
+    elif op == '/': print(f"Wynik: {a / b if b != 0 else 'Błąd: Dzielenie przez zero'}")
+    else: print("Nieznana operacja")
+
+def konwerter():
+    typ = input("Wybierz kierunek (C - na F, F - na C): ").upper()
+    val = float(input("Podaj temperaturę: "))
+    if typ == 'C': print(f"{val}°C = {val * 1.8 + 32}°F")
+    elif typ == 'F': print(f"{val}°F = {(val - 32) / 1.8:.2f}°C")
+
+def srednia():
+    n = int(input("Podaj liczbę ocen: "))
+    suma = 0
+    for i in range(n):
+        suma += float(input(f"Podaj ocenę {i+1}: "))
+    srednia = suma / n
+    print(f"Średnia: {srednia:.2f}")
+    print("Uczeń zdał." if srednia >= 3.0 else "Uczeń nie zdał.")
+
+while True:
+    wybor = input("\n1. Kalkulator, 2. Konwerter, 3. Średnia, 4. Wyjście: ")
+    if wybor == '1': kalkulator()
+    elif wybor == '2': konwerter()
+    elif wybor == '3': srednia()
+    elif wybor == '4': break
